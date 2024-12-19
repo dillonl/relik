@@ -147,9 +147,9 @@ def create_windows(
                             or end_char > window.offset + len(window.text)
                         ):
                             logger.error(
-                                f"Error in window {window._d['window_id']}, start: {start_char}, ",
-                                f"end: {end_char}, window start: {window.offset}, window end: ",
-                                f"{window.offset + len(window.text)}",
+                                f"Error in window {window._d['window_id']}, start: {start_char}, "
+                                f"end: {end_char}, window start: {window.offset}, window end: "
+                                f"{window.offset + len(window.text)}"
                             )
                             continue
                         window_level_labels.append([start_char, end_char, label_text])
@@ -195,9 +195,9 @@ def create_windows(
                                 break
                     if start_token is None or end_token is None:
                         logger.error(
-                            f"Error in window {window._d['window_id']}, start: {start_char}, ",
-                            f"end: {end_char}, window start: {window.offset}, window end: ",
-                            f"{window.offset + len(window.text)}",
+                            f"Error in window {window._d['window_id']}, start: {start_char}, "
+                            f"end: {end_char}, window start: {window.offset}, window end: "
+                            f"{window.offset + len(window.text)}"
                         )
                         continue
                     window_level_labels_but_for_tokens.append(
@@ -368,9 +368,9 @@ def create_windows(
                                         break
                                 if object_index is None:
                                     logger.error(
-                                        f"Error in window {window._d['window_id']}, start: {object_start_char}, ",
-                                        f"end: {object_end_char}, window start: {window.offset}, window end: ",
-                                        f"{window.offset + len(window.text)}",
+                                        f"Error in window {window._d['window_id']}, start: ",
+                                        f"{subject_start_char}, end: {subject_end_char}, window start: ",
+                                        f"{window.offset}, window end: {window.offset + len(window.text)}",
                                     )
                                     continue
                                 object_start_token, object_end_token, _ = window._d[
